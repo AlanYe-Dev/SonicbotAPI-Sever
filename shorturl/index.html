@@ -1,0 +1,19 @@
+<scipt>
+var query = {}
+if (diff && oldid !== diff) {
+query.diff = diff
+// oldid is prev?
+if (oldid && $('.diff-multi').length) {
+query.oldid = oldid
+}
+} else if (oldid && oldid !== revision) {
+query.oldid = oldid
+} else {
+query.curid = curid
+}
+if (threadId) query.threadId = threadId
+
+var shortUrl = baseURL + '?' + $.param(query)
+dev.shortUrl = shortUrl
+document.write(shortUrl);
+</scipt>
