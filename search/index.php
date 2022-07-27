@@ -41,7 +41,7 @@ foreach( $result["query"]["search"] as $rc ){
     curl_setopt( $fetchTheURL, CURLOPT_RETURNTRANSFER, true );
     $outputURL = curl_exec( $fetchTheURL );
     curl_close( $fetchTheURL );
-    echo( "\n[[" . $rc["title"] . "]]\n" . $outputURL );
+    echo( "\n[[" . $rc["title"] . "]]\n" );
 }
 
 #echo("是的！！！");
